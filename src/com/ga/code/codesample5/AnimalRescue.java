@@ -15,7 +15,7 @@ public class AnimalRescue {
     }
 
     public Dog rescueDog(Dog dog) {
-        this.dogs.remove(dog);
+        this.dogs.add(dog);
 
         return dog;
     }
