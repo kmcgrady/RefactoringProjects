@@ -3,10 +3,10 @@ package com.ga.code.codesample4;
 
 public class CodeSample4Main {
     public static void main(String[] args) {
-        CloudProvider[] providers = { new AWS(), new GoogleDrive() };
+        CloudServerProvider[] providers = { new AWS() };
 
         // Create Servers on each provider
-        for (CloudProvider provider : providers) {
+        for (CloudServerProvider provider : providers) {
             provider.createServer("Web Server #1", "Virginia");
             provider.createServer("Web Server #2", "Virginia");
             provider.createServer("Web Server", "Portland");
@@ -19,7 +19,7 @@ public class CodeSample4Main {
         }
 
         // Show all servers created
-        for (CloudProvider provider : providers) {
+        for (CloudServerProvider provider : providers) {
             provider.listServers();
         }
     }

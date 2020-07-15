@@ -3,7 +3,7 @@ package com.ga.code.codesample4;
 import java.util.HashMap;
 import java.util.Map;
 
-public class GoogleDrive implements CloudProvider {
+public class GoogleDrive implements CloudStorageProvider {
     private Map<String, String> files;
 
     public GoogleDrive() {
@@ -18,15 +18,5 @@ public class GoogleDrive implements CloudProvider {
     @Override
     public String getFile(String name) {
         return this.files.get(name);
-    }
-
-    @Override
-    public void createServer(String name, String region) {
-
-    }
-
-    @Override
-    public void listServers() {
-
     }
 }

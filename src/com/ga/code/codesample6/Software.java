@@ -2,40 +2,26 @@ package com.ga.code.codesample6;
 
 public class Software {
     private String name;
-    private int majorVersion;
-    private int minorVersion;
-    private int buildNumber;
+    private Version version;
 
-    public Software(String name, int majorVersion, int minorVersion, int buildNumber) {
+    public Software(String name, Version version) {
         this.name = name;
-        this.majorVersion = majorVersion;
-        this.minorVersion = minorVersion;
-        this.buildNumber = buildNumber;
+        this.version = version;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getMajorVersion() {
-        return majorVersion;
+    public Version getVersion() {
+        return version;
     }
 
-    public int getMinorVersion() {
-        return minorVersion;
-    }
-
-    public int getBuildNumber() {
-        return buildNumber;
-    }
-
-    public void upgrade(int majorVersion, int minorVersion, int buildNumber) {
-        if (majorVersion < this.majorVersion || minorVersion < this.minorVersion || buildNumber < this.buildNumber) {
+    public void upgrade(Version version) {
+        if (this.version.compareTo(version) <= 0) {
             throw new RuntimeException("Invalid upgrade");
         }
 
-        this.majorVersion = majorVersion;
-        this.minorVersion = minorVersion;
-        this.buildNumber = buildNumber;
+        this.version = version;
     }
 }

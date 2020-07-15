@@ -1,15 +1,16 @@
 package com.ga.code.codesample1;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TodoList {
-    private ArrayList<String> tasks;
+    private List<String> tasks;
 
     public TodoList() {
         this.tasks = new ArrayList<String>();
     }
 
-    public TodoList(ArrayList<String> initialTasks) {
+    public TodoList(List<String> initialTasks) {
         this.tasks = initialTasks;
     }
 

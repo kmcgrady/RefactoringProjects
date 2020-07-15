@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class AWS implements CloudProvider {
+public class AWS implements CloudServerProvider, CloudStorageProvider {
     private Map<String, String> files;
     private Map<String, List<String>> servers;
 

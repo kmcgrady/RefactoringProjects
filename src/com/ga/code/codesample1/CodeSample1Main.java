@@ -9,10 +9,7 @@ public class CodeSample1Main {
         linkedList.add("Buy Groceries");
         linkedList.add("Take out trash");
 
-        TodoList todos = new TodoList();
-        for (String listItem : linkedList) {
-            todos.addTask(listItem);
-        }
+        TodoList todos = new TodoList(linkedList);
 
         todos.printTasks();
     }

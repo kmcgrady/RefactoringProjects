@@ -23,4 +23,10 @@ public class Person {
     public void addAccount(String name, int balance) {
         this.bankAccounts.add(new BankAccount(name, balance));
     }
+
+    public void printSummary() {
+        for (BankAccount bankAccount : this.bankAccounts) {
+            System.out.println(bankAccount.getName() + " - " + bankAccount.getBalance());
+        }
+    }
 }

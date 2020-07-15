@@ -7,12 +7,11 @@ public class CodeSample2Main {
         myPerson.addAccount("US Bank", 50000);
         myPerson.addAccount("Homestreet Bank", 250000);
 
+        printSummary(myPerson);
     }
 
     public static void printSummary(Person person) {
-        for (BankAccount bankAccount : person.getBankAccounts()) {
-            System.out.println(bankAccount.getName() + " - " + bankAccount.getBalance());
-        }
+        person.printSummary();
     }
 
 }

@@ -5,11 +5,13 @@ import java.util.List;
 
 public class AnimalRescue {
     private List<Dog> dogs;
+    private List<BigDog> bigDogs;
     private Manager manager;
     private Employee employee;
 
     public AnimalRescue(Manager manager, Employee employee) {
         this.dogs = new ArrayList<Dog>();
+        this.bigDogs = new ArrayList<BigDog>();
         this.manager = manager;
         this.employee = employee;
     }
@@ -20,13 +22,19 @@ public class AnimalRescue {
         return dog;
     }
 
+    public Dog rescueDog(BigDog dog) {
+        this.bigDogs.add(dog);
+
+        return dog;
+    }
+
     public void feedDogs() {
         for (Dog dog : this.dogs) {
-            if (dog instanceof BigDog) {
-                this.manager.feed(dog);
-            } else {
-                this.employee.feed(dog);
-            }
+            this.employee.feed(dog);
+        }
+
+        for (BigDog dog : this.bigDogs) {
+            this.manager.feed(dog);
         }
     }
 }
