@@ -29,9 +29,4 @@ public class GoogleDrive implements CloudProvider {
     public void listServers() {
 
     }
-
-    @Override
-    public String getCDNAddress() {
-        return null;
-    }
 }

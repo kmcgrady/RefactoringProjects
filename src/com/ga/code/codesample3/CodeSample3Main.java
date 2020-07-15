@@ -7,25 +7,25 @@ public class CodeSample3Main {
     public static void main(String[] args) {
         SalesFunnel salesFunnel = new SalesFunnel();
 
-        salesFunnel.moveToInterest(SalesFunnel.InterestedStateType.NEW_CUSTOMER);
+        salesFunnel.moveToInterest();
         List<String> competitors = new ArrayList<String>();
         competitors.add("Google");
         competitors.add("Amazon");
         competitors.add("Facebook");
-        salesFunnel.moveToDecision(competitors);
+        salesFunnel.moveToDecision();
 
-        salesFunnel.moveToAction(2, true);
+        salesFunnel.moveToAction();
 
         // Time to Renew
-        salesFunnel.moveToInterest(SalesFunnel.InterestedStateType.RENEW_CUSTOMER);
+        salesFunnel.moveToInterest();
 
         // The decided without telling us they are going with someone else :-(
-        salesFunnel.moveToAction(1, false);
+        salesFunnel.moveToAction();
 
         // Let's win that customer back.
-        salesFunnel.moveToInterest(SalesFunnel.InterestedStateType.WIN_CUSTOMER);
+        salesFunnel.moveToInterest();
 
         // They are considering the same competitors
-        salesFunnel.moveToDecision(competitors);
+        salesFunnel.moveToDecision();
     }
 }

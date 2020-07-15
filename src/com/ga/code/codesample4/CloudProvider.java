@@ -5,6 +5,4 @@ public interface CloudProvider {
     public String getFile(String name);
     public void createServer(String name, String region);
     public void listServers();
-    public String getCDNAddress();
-
 }

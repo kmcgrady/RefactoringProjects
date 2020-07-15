@@ -47,9 +47,4 @@ public class AWS implements CloudProvider {
             System.out.println();
         }
     }
-
-    @Override
-    public String getCDNAddress() {
-        return "https://cdn.aws.com";
-    }
 }
