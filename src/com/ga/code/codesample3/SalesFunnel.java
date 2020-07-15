@@ -1,5 +1,7 @@
 package com.ga.code.codesample3;
 
+import com.ga.code.codesample3.states.SalesFunnelState;
+
 import java.util.List;
 
 public class SalesFunnel {
@@ -11,6 +13,10 @@ public class SalesFunnel {
 
     public String getStateName() {
         return stateName;
+    }
+
+    public void changeState(SalesFunnelState nextState) {
+
     }
 
     public void moveToInterest() {
